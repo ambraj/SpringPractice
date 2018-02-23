@@ -1,14 +1,12 @@
 package com.luv2code.hibernate.demo;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class CreateStudentDemo {
+public class DeleteStudentDemo {
 
 	public static void main(String[] args) {
 		
@@ -19,37 +17,30 @@ public class CreateStudentDemo {
 				.addAnnotatedClass(Student.class)
 				.buildSessionFactory();
 						
-		// create session
-		Session session = factory.getCurrentSession();
+		
 		
 		try {
 			
-			System.out.println("Creating new student object!");
+			System.out.println("Deleting student object!");
+
+			int studentId = 1;
 			
-			Student student = new Student("Daffy", "Duck", "daffy@gmail.com");
-			
+			// create session
+			Session session = factory.getCurrentSession();
 			session.beginTransaction();
 			
-			System.out.println("Saving the student!");
-			
-			session.save(student);
-			
+			Student student = session.get(Student.class, studentId);
+			session.delete(student);
 			session.getTransaction().commit();
-			
-			// find out the student's id: primary key
-			System.out.println("Saved student: id: "+student.getId());
+			System.out.println("deleted #1, Done!");
 			
 			session = factory.getCurrentSession();
 			session.beginTransaction();
 			
-			Student myStudent = session.get(Student.class, student.getId());
+			session.createQuery("delete from Student where id=2").executeUpdate();
 			
-			System.out.println("Get complete: "+myStudent);
-			
-			System.out.println("Getting ");
-			
-			
-			System.out.println("Done!");
+			session.getTransaction().commit();
+			System.out.println("deleted #2, Done!");
 			
 		} finally {
 			factory.close();

@@ -1,14 +1,12 @@
 package com.luv2code.hibernate.demo;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class CreateStudentDemo {
+public class ReadStudentDemo {
 
 	public static void main(String[] args) {
 		
@@ -26,28 +24,15 @@ public class CreateStudentDemo {
 			
 			System.out.println("Creating new student object!");
 			
-			Student student = new Student("Daffy", "Duck", "daffy@gmail.com");
+			Student student = new Student("Paul", "Wall", "paul@gmail.com");
 			
 			session.beginTransaction();
 			
-			System.out.println("Saving the student!");
+			System.out.println("Saving student object!");
 			
 			session.save(student);
 			
 			session.getTransaction().commit();
-			
-			// find out the student's id: primary key
-			System.out.println("Saved student: id: "+student.getId());
-			
-			session = factory.getCurrentSession();
-			session.beginTransaction();
-			
-			Student myStudent = session.get(Student.class, student.getId());
-			
-			System.out.println("Get complete: "+myStudent);
-			
-			System.out.println("Getting ");
-			
 			
 			System.out.println("Done!");
 			
