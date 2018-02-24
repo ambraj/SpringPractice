@@ -32,3 +32,24 @@ spring-demo-mvc/.settings/org.eclipse.wst.common.project.facet.core.xml
 spring-demo-mvc/build/classes/resources/messages.properties
 spring-demo-xml/src/com/luv2code/.DS_Store
 spring-demo-xml/src/com/.DS_Store
+/.recommenders/
+hb-01-one-to-one-uni/.classpath
+hb-01-one-to-one-uni/.project
+hb-02-one-to-one-bi/.classpath
+hb-02-one-to-one-bi/.project
+hb-02-one-to-one-bi/src/hibernate.cfg.out.xml
+hb-03-one-to-many/.classpath
+hb-03-one-to-many/.project
+hb-03-one-to-many/src/hibernate.cfg.out.xml
+hb-04-one-to-many-uni/.classpath
+hb-04-one-to-many-uni/.project
+hb-eager-vs-lazy-demo/.classpath
+hb-eager-vs-lazy-demo/.project
+hibernate-demo/.classpath
+hibernate-demo/.project
+*.xml
+hibernate-tutorial/.classpath
+hibernate-tutorial/.project
+Servers/.project
+Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
+Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
