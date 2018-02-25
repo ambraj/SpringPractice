@@ -53,3 +53,6 @@ hibernate-tutorial/.project
 Servers/.project
 Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
 Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
+hb-05-many-to-many/.classpath
+hb-05-many-to-many/.project
+web-customer-project/.classpath
