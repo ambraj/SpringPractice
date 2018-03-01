@@ -56,3 +56,6 @@ Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
 hb-05-many-to-many/.classpath
 hb-05-many-to-many/.project
 web-customer-project/.classpath
+solution-code-spring-aop-after-returning/src/com/.DS_Store
+solution-code-spring-aop-after-returning/src/com/luv2code/.DS_Store
+mycoolwebapp/.settings/.jsdtscope
