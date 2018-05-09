@@ -7,6 +7,11 @@ public class User {
 	private Integer id;
 	private String name;
 	private Date birthDate;
+	
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public User(Integer id, String name, Date birthDate) {
 		super();
